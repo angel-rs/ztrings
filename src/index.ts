@@ -53,15 +53,19 @@ const z = (input: any, ...args: any) => {
   return output;
 }
 
-const run = () => {
-  console.log(z`
-  {red I have} ${23} \N color[|s]
-`);
+export {
+  z, // zstringify
+  s, // simplify/simplur
+  c, // compress/compress-tag
+  p, // prettify/colors
+};
+
+  const run = () => {
     console.log(z`
-    I have ${23} color[|s]\N
+    I have ${21} color[|s]\N
 
     {bright bright}\N
-    {dim dim}\t\t\t
+    {dim dim}
     {underscore underscore}\N
     {blink blink}
     {reverse reverse}\N
@@ -82,13 +86,5 @@ const run = () => {
     {bgWhite bgWhite}
     {bgRed dim Test}\N
   `);
-};
-
-export {
-  z, // zstringify
-  s, // simplify/simplur
-  c, // compress/compress-tag
-  p, // prettify/colors
-};
-
-run();
+  };
+  run();
