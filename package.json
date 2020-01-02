@@ -10,6 +10,7 @@
   "typings": "lib/*.d.ts",
   "scripts": {
     "build": "tsc",
+    "dev": "NODE_ENV=developmentz tsc-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prepare": "npm run build",
@@ -30,10 +31,11 @@
   },
   "homepage": "https://github.com/angel-rs/ztrings#readme",
   "devDependencies": {
+    "@types/node": "^12.12.21",
+    "tsc-watch": "^4.0.0",
     "typescript": "^3.7.3"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
     "compress-tag": "^1.2.2",
     "simplur": "^1.0.6"
   }
