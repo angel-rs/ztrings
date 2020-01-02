@@ -1,6 +1,6 @@
 {
   "name": "ztrings",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An opiniated string template library",
   "main": "lib/index.js",
   "files": [
