@@ -56,7 +56,7 @@ console.log(z`
     {bgRed dim Test}\N
 `);
 ```
-<image src="./demo.gif"/>
+<image style="display: flex; margin: 0 auto;" src="demo.gif" />
 
 
 ## Contributing
@@ -81,4 +81,4 @@ Also you can take a look at the [roadmap](#Roadmap) below of some of the bullet 
 
 ## Folder structure
 
-![folder structure](./arkit.svg)
+![folder structure](arkit.svg)
