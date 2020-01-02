@@ -12,7 +12,7 @@
     "build": "tsc",
     "dev": "NODE_ENV=developmentz tsc-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "arkit": "arkit"
+    "arkit": "arkit --output arkit.png"
   },
   "prepare": "npm run build",
   "repository": {

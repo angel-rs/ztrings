@@ -1,6 +1,6 @@
 ![logo](logo.png)
 
-`ztrings` is a small opiniated string template package built to enable convenience and flexibility for you string-based needs, features:
+`ztrings` :zap: is a small opiniated string template package built to enable convenience and flexibility for you string-based needs, featuring:
 
 - Strings color styling in node and in the browser (using ASCII code escapes)
 - String pluralization using [simplur](https://github.com/broofa/BroofaJS/tree/master/simplur)
@@ -81,4 +81,4 @@ Also you can take a look at the [roadmap](#Roadmap) below of some of the bullet 
 
 ## Folder structure
 
-![folder structure](arkit.svg)
+![folder structure](arkit.png)
