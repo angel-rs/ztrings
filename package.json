@@ -1,7 +1,7 @@
 {
   "name": "ztrings",
-  "version": "1.1.1",
-  "description": "An opiniated string template library",
+  "version": "1.1.2",
+  "description": "String templating built for your string-based needs",
   "main": "lib/index.js",
   "files": [
     "lib /**/*"
