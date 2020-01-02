@@ -2,9 +2,9 @@ import {
   simplify,
   compress,
   prettify,
+  linebreak,
 } from './transformations';
 import {
-  getLineBreaks,
   restoreLineBreaks,
 } from './helpers';
 
@@ -14,58 +14,73 @@ const s = simplify,
       c = compress,
       p = prettify;
 
-// NOTE: in one of the transformations the linebreaks `\n` gets lost
-//       so, as a workaround we prepend `\` for each `\n`and add it back again
+// NOTE: the `compress` transformation removes all the linebreaks `\n`
+//       so, as a workaround we treat linebreaks as as `$LINEBREAK$`
+//       that way, for each `$LINEBREAK$` we restore `\n` in the original position.
 const transformations = [
+  linebreak,
   simplify,
   compress,
   prettify,
 ];
 
 const chain = (string: string, transformations: any, ...args: any) =>
-  transformations.reduce((input: string, _: string, index: number) => {
+  transformations.reduce((input: any, _: string, index: number) => {
     const output = transformations[index](input, ...args);
     if (isDev) {
-      console.log(`${transformations[index].name}: ${output}`);
+      console.log('-----------------------');
+      console.log(`INPUT: ${JSON.stringify(input)}`);
+      console.log(`INPUT RAW: ${input.raw}`);
+      console.log(`ARGS: ${JSON.stringify(args)}`);
+      console.log(`OUTPUT [${transformations[index].name}]: ${output}`);
+      console.log(`OUTPUT RAW [${transformations[index].name}]: ${JSON.stringify(output)}`);
       console.log('-----------------------');
     }
     return output;
   }, string);
 
 const z = (input: any, ...args: any) => {
-  const linebreaks = getLineBreaks(input, ...args);
-  const ztringified = chain(input, transformations, ...args);
-  const output = restoreLineBreaks(ztringified, linebreaks);
+  let output: string = input;
+
+  if (isDev) {
+    console.log(`RAW: ${input.raw}`);
+    console.log(`ARGS: ${JSON.stringify(args)}`);
+    console.log('-----------------------');
+  }
+
+  output = chain(input, transformations, ...args);
+  output = restoreLineBreaks(output);
   return output;
 }
 
 const run = () => {
+  console.log(z`
+  {red I have} ${23} \N color[|s]
+`);
     console.log(z`
-    I have ${23} color[|s]\n\n\n\n
+    I have ${23} color[|s]\N
 
-    {bright bright}
-    {dim dim}
-    {underscore underscore}
+    {bright bright}\N
+    {dim dim}\t\t\t
+    {underscore underscore}\N
     {blink blink}
-    {reverse reverse}
-    {hidden hidden}
-    {black black}
+    {reverse reverse}\N
     {red red}
-    {green green}
+    {green green}\N
     {yellow yellow}
-    {blue blue}
+    {blue blue}\N
     {magenta magenta}
-    {cyan cyan}
+    {cyan cyan}\N
     {white white}
-    {bgBlack bgBlack}
+    {bgBlack bgBlack}\N
     {bgRed bgRed}
-    {bgGreen bgGreen}
+    {bgGreen bgGreen}\N
     {bgYellow bgYellow}
-    {bgBlue bgBlue}
+    {bgBlue bgBlue}\N
     {bgMagenta bgMagenta}
-    {bgCyan bgCyan}
+    {bgCyan bgCyan}\N
     {bgWhite bgWhite}
-    {bgRed dim Test}
+    {bgRed dim Test}\N
   `);
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "ztrings",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "An opiniated string template library",
   "main": "lib/index.js",
   "files": [
@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "NODE_ENV=developmentz tsc-watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "arkit": "arkit"
   },
   "prepare": "npm run build",
   "repository": {
@@ -32,6 +33,7 @@
   "homepage": "https://github.com/angel-rs/ztrings#readme",
   "devDependencies": {
     "@types/node": "^12.12.21",
+    "arkit": "^1.6.2",
     "tsc-watch": "^4.0.0",
     "typescript": "^3.7.3"
   },
