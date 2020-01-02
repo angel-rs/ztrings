@@ -26,11 +26,38 @@ For usage of each package functionaly head to their corresponding `Examples` sec
 - [simplur](https://github.com/broofa/BroofaJS/tree/master/simplur#usage)
 - [compress-tag](https://github.com/iansan5653/compress-tag#examples)
 
+
 ```javascript
 import { z } from 'ztrings';
 
-console.log(z`Hello, I have ${2}`);
+console.log(z`
+    I have ${21} color[|s]\N
+
+    {bright bright}\N
+    {dim dim}
+    {underscore underscore}\N
+    {blink blink}
+    {reverse reverse}\N
+    {red red}
+    {green green}\N
+    {yellow yellow}
+    {blue blue}\N
+    {magenta magenta}
+    {cyan cyan}\N
+    {white white}
+    {bgBlack bgBlack}\N
+    {bgRed bgRed}
+    {bgGreen bgGreen}\N
+    {bgYellow bgYellow}
+    {bgBlue bgBlue}\N
+    {bgMagenta bgMagenta}
+    {bgCyan bgCyan}\N
+    {bgWhite bgWhite}
+    {bgRed dim Test}\N
+`);
 ```
+<image src="./demo.gif"/>
+
 
 ## Contributing
 
@@ -42,6 +69,7 @@ Also you can take a look at the [roadmap](#Roadmap) below of some of the bullet 
 - [x] Compress in one package many strings utility functions
 - [x] Custom coloring `prettify` functionality
 - [x] Find a way to escape line breaks at will (achieved using custom escape character `\N`)
+- [ ] Add support for tabs `\t`
 - [ ] Escape line breaks using the conventional `\n` (not sure if possible)
 - [ ] Make the `z` function configurable, pass as flags the transformation functions
 - [ ] Allow for custom transformation functions
