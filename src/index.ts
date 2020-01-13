@@ -59,32 +59,3 @@ export {
   c, // compress/compress-tag
   p, // prettify/colors
 };
-
-  const run = () => {
-    console.log(z`
-    I have ${21} color[|s]\N
-
-    {bright bright}\N
-    {dim dim}
-    {underscore underscore}\N
-    {blink blink}
-    {reverse reverse}\N
-    {red red}
-    {green green}\N
-    {yellow yellow}
-    {blue blue}\N
-    {magenta magenta}
-    {cyan cyan}\N
-    {white white}
-    {bgBlack bgBlack}\N
-    {bgRed bgRed}
-    {bgGreen bgGreen}\N
-    {bgYellow bgYellow}
-    {bgBlue bgBlue}\N
-    {bgMagenta bgMagenta}
-    {bgCyan bgCyan}\N
-    {bgWhite bgWhite}
-    {bgRed dim Test}\N
-  `);
-  };
-  run();

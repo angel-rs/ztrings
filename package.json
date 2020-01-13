@@ -1,6 +1,6 @@
 {
   "name": "ztrings",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "String templating built for your string-based needs",
   "main": "lib/index.js",
   "files": [
@@ -12,9 +12,9 @@
     "build": "tsc",
     "dev": "NODE_ENV=developmentz tsc-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "arkit": "arkit --output arkit.png"
-  },
-  "prepare": "npm run build",
+    "arkit": "arkit --output arkit.png",
+    "prepare": "npm run build"
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angel-rs/ztrings.git"
