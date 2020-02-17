@@ -3,10 +3,10 @@ import {
   compress,
   prettify,
   linebreak,
-} from './transformations';
+} from './transformations/index';
 import {
   restoreLineBreaks,
-} from './helpers';
+} from './helpers/index';
 
 const isDev = false;
 
