@@ -1,10 +1,10 @@
 {
   "name": "ztrings",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "String templating built for your string-based needs",
   "main": "lib/index.js",
   "files": [
-    "lib /**/*"
+    "lib/**/*"
   ],
   "types": "lib/index.d.ts",
   "typings": "lib/*.d.ts",
