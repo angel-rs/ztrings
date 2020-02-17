@@ -3,13 +3,13 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "lib",
     "strict": true,
     "typeRoots": [
       "./node_modules/@types",
       "./typings"
     ]
   },
-  "include": ["src", "typings"],
+  "include": ["./src", "./typings"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
